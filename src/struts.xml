@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+		<action name="" class="org.iiitb.ebay.action.HomeAction">
+			<result name="success">/home.jsp</result>
+			<result name="failure">/error.jsp</result>
+		</action>
+		<action name="register" class="org.iiitb.ebay.action.RegistrationAction">
+			<result name="success">/home.jsp</result>
+			<result name="failure">/error.jsp</result>
+		</action>
+	</package>
+	<package name="category" extends="struts-default">
+	<action name="category" class="org.iiitb.ebay.action.CategoryAction">
+	<result name="success">/result.jsp</result></action>
+	</package>
+	<package name="item" extends="struts-default">
+	<action name="item"  class="org.iiitb.ebay.action.ItemAction">
+   			<result name="add">/additem.jsp</result>	
+   			<result name="delete">/deleteitem.jsp</result>	
+   	</action>
+   	
+   	<action name="additem"  class="org.iiitb.ebay.action.AddItemAction">
+   			<result name="hi">/home.jsp</result>	
+   			</action>
+   			
+   			<action name="delete"  class="org.iiitb.ebay.action.DeleteItemAction">
+   			<result name="hello">/home.jsp</result>
+   				
+   	</action>
+	</package>
+
+</struts>
